@@ -7,38 +7,70 @@ body {
   background-color: black;
 }
 
-.font-1 {
-  font-family: "Poppins", sans-serif;
-}
-
-.font-2 {
-  font-family: "Gideon Roman", cursive;
-}
-
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.red {
-  border: solid red 1px;
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
 }
 
 .container {
-  width: 50%;
-  min-width: 600px;
+  padding: 2.5rem 0px;
   margin: 0px auto;
-  padding: 1.5rem 0px;
 }
 
 .container .row1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.container .row1 .heading {
-  width: 50%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .container .row1 .heading h2 {
@@ -46,7 +78,7 @@ body {
 }
 
 .container .row1 .content {
-  width: 50%;
+  margin: 0px;
 }
 
 .container .row1 .content p {
@@ -61,18 +93,17 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 1.5em 0px;
-}
-
-.container .row2 .image {
-  margin: 0px 20px;
-  text-align: start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 1rem 0px;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
 }
 
 .container .row2 .image span {
-  -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
   text-orientation: mixed;
   font-weight: 300;
   font-size: 0.8rem;
@@ -86,4 +117,25 @@ body {
 .container .row2 .image5 {
   padding-top: 6rem;
 }
-/*# sourceMappingURL=style.css.map */
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  .row1 {
+    text-align: center;
+    padding: 0px;
+  }
+  .row1 .heading,
+  .row1 .content {
+    margin: 10px 0px;
+  }
+  .row2 {
+    text-align: center;
+    padding: 0px;
+  }
+  .row2 .image {
+    padding: 1rem 0px !important;
+  }
+}
